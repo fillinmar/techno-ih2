@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fillinmar/CLionProjects/hw_2/src/dinamic/paral.c
+paral.h
+/home/fillinmar/CLionProjects/hw_2/src/dinamic/paral.h
+stdlib.h
+-
+stdio.h
+-
+sys/mman.h
+-
+sys/wait.h
+-
+unistd.h
+-
+
+/home/fillinmar/CLionProjects/hw_2/src/dinamic/paral.h
+stdbool.h
+-
+stdio.h
+-
+

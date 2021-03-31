@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/menu/menu.h
+stdbool.h
+-
+stdio.h
+-
+matrix.h
+../src/menu/matrix.h
+
+../src/static_matrix/matrix.h
+stdbool.h
+-
+stdio.h
+-
+
+/home/fillinmar/CLionProjects/hw_2/cmd/main.c
+menu.h
+/home/fillinmar/CLionProjects/hw_2/cmd/menu.h
+

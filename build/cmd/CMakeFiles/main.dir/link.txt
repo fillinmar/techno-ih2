@@ -1,0 +1,1 @@
+/usr/bin/cc --coverage   CMakeFiles/main.dir/main.c.o  -o main  ../src/menu/libmenu.a ../src/static_matrix/libstatic_matrix.a 

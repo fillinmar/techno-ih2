@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC --coverage -g  -shared -Wl,-soname,libdinamic_matrix.so -o libdinamic_matrix.so CMakeFiles/dinamic_matrix.dir/matrix.c.o 

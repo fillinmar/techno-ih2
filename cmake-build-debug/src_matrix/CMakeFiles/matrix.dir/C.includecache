@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fillinmar/CLionProjects/hw_2/src_matrix/matrix.c
+matrix.h
+/home/fillinmar/CLionProjects/hw_2/src_matrix/matrix.h
+stdlib.h
+-
+
+/home/fillinmar/CLionProjects/hw_2/src_matrix/matrix.h
+stdbool.h
+-
+stdio.h
+-
+
