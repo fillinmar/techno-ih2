@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused -Werror -Wpedantic -fprofile-arcs -ftest-coverage   CMakeFiles/static_matrix_test.dir/main.cpp.o CMakeFiles/static_matrix_test.dir/matrix.cpp.o  -o static_matrix_test  ../../../../src/static_matrix/libstatic_matrix.a ../../../../lib/libgtest.a -lpthread 

@@ -1,9 +1,0 @@
-/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/fillinmar/techno-ih2
-CMake Error at CMakeLists.txt:22 (add_subdirectory):
-  add_subdirectory given source "vendor/googltest" which is not an existing
-  directory.
-
-
--- Configuring incomplete, errors occurred!
-See also "/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles/CMakeOutput.log".
-See also "/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles/CMakeError.log".

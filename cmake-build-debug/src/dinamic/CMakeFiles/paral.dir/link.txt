@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC --coverage -g  -shared -Wl,-soname,libparal.so -o libparal.so CMakeFiles/paral.dir/paral.c.o 
