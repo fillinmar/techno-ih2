@@ -340,15 +340,15 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/main.cpp
+/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/main.cpp
 gtest/gtest.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/matrix.cpp
+/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/matrix.cpp
 gtest/gtest.h
 -
 fstream
 -
 matrix.h
-/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/matrix.h
+/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/matrix.h
 

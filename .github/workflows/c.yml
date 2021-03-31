@@ -1,0 +1,36 @@
+name: MY CUSTOM NAME
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install all dependecies
+        run: sudo apt install build-essential &&  sudo apt install git && sudo apt install lcov && sudo apt install valgrind && sudo apt install libgtest-dev
+
+      - name: building project
+        run: make build-project
+
+      - name: running tests
+        run: make run-all-tests
+
+#      - name: running valgrind
+#        run: make run-all-vg-check
+#
+#      - name: running test coverage
+#        run: make get-all-coverage
+#
+#      - name: get code coverage
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: coverage
+#          path: coverage/

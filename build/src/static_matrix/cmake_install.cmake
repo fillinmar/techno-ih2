@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/CLionProjects/hw_2/src/static_matrix
+# Install script for directory: /home/fillinmar/techno-ih2/src/static_matrix
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

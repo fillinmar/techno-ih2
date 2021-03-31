@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix/matrix.c" "/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/src/dynamic_matrix/CMakeFiles/dynamic_matrix.dir/matrix.c.o"
+  "/home/fillinmar/techno-ih2/src/dynamic_matrix/matrix.c" "/home/fillinmar/techno-ih2/cmake-build-debug/src/dynamic_matrix/CMakeFiles/dynamic_matrix.dir/matrix.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

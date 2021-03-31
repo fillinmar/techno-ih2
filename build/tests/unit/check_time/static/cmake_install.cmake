@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/static
+# Install script for directory: /home/fillinmar/techno-ih2/tests/unit/check_time/static
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

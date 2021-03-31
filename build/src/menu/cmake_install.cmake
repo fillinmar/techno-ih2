@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/CLionProjects/hw_2/src/menu
+# Install script for directory: /home/fillinmar/techno-ih2/src/menu
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

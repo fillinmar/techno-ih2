@@ -5,29 +5,29 @@
 		<Option title="googletest-distribution"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\tests\unit\;CMake Files\tests\unit\check_time\;CMake Files\tests\unit\check_time\dynamic\;CMake Files\tests\unit\check_time\static\;CMake Files\tests\unit\matrix\;CMake Files\tests\unit\matrix\dynamic_matrix\;CMake Files\tests\unit\matrix\static_matrix\;CMake Files\vendor\;CMake Files\vendor\googltest\;CMake Files\vendor\googltest\googlemock\;CMake Files\vendor\googltest\googlemock\cmake\;CMake Files\vendor\googltest\googletest\;CMake Files\vendor\googltest\googletest\cmake\;CMake Files\src\;CMake Files\src\static_matrix\;CMake Files\src\menu\;CMake Files\src\dynamic_matrix\;CMake Files\cmd\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tests\;CMake Files\tests\unit\;CMake Files\tests\unit\check_time\;CMake Files\tests\unit\check_time\dynamic\;CMake Files\tests\unit\check_time\static\;CMake Files\tests\unit\matrix\;CMake Files\tests\unit\matrix\dynamic_matrix\;CMake Files\tests\unit\matrix\dynamic_matrix\file_with_matrix\;CMake Files\tests\unit\matrix\static_matrix\;CMake Files\tests\unit\matrix\static_matrix\file_with_matrix\;CMake Files\vendor\;CMake Files\vendor\googltest\;CMake Files\vendor\googltest\googlemock\;CMake Files\vendor\googltest\googlemock\cmake\;CMake Files\vendor\googltest\googletest\;CMake Files\vendor\googltest\googletest\cmake\;CMake Files\src\;CMake Files\src\static_matrix\;CMake Files\src\menu\;CMake Files\src\dynamic_matrix\;CMake Files\cmd\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -37,23 +37,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -63,23 +63,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -89,23 +89,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googlemock"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -115,21 +115,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -139,21 +139,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -163,21 +163,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -187,21 +187,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest"/>
+				<Option output="/home/fillinmar/techno-ih2/cmake-build-debug/lib/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include"/>
-					<Add directory="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest/include"/>
+					<Add directory="/home/fillinmar/techno-ih2/vendor/googltest/googletest"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -211,92 +211,104 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock-all.cc">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock_main.cc">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/src/gtest-all.cc">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/src/gtest_main.cc">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/check_time/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\check_time\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\check_time\dynamic\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/static/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/check_time/static/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\check_time\static\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\matrix\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\matrix\dynamic_matrix\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/static_matrix/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/file_with_matrix/test_expect_matrix.txt">
+			<Option virtualFolder="CMake Files\tests\unit\matrix\dynamic_matrix\file_with_matrix\"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/file_with_matrix/test_matrix.txt">
+			<Option virtualFolder="CMake Files\tests\unit\matrix\dynamic_matrix\file_with_matrix\"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/static_matrix/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\tests\unit\matrix\static_matrix\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/static_matrix/file_with_matrix/test_expect_matrix.txt">
+			<Option virtualFolder="CMake Files\tests\unit\matrix\static_matrix\file_with_matrix\"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/techno-ih2/tests/unit/matrix/static_matrix/file_with_matrix/test_matrix.txt">
+			<Option virtualFolder="CMake Files\tests\unit\matrix\static_matrix\file_with_matrix\"/>
+		</Unit>
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\vendor\googltest\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\vendor\googltest\googlemock\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\vendor\googltest\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\vendor\googltest\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\vendor\googltest\googletest\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/cmake/Config.cmake.in">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\vendor\googltest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/cmake/gtest.pc.in">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\vendor\googltest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\vendor\googltest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/home/fillinmar/techno-ih2/vendor/googltest/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\vendor\googltest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/src/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/src/static_matrix/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/src/static_matrix/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\static_matrix\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/src/menu/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/src/menu/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\menu\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/src/dynamic_matrix/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\dynamic_matrix\"/>
 		</Unit>
-		<Unit filename="/home/fillinmar/CLionProjects/hw_2/cmd/CMakeLists.txt">
+		<Unit filename="/home/fillinmar/techno-ih2/cmd/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\cmd\"/>
 		</Unit>
 	</Project>

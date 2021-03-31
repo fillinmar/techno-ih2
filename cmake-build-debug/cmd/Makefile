@@ -68,10 +68,10 @@ RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -157,14 +157,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/cmd/CMakeFiles/progress.marks
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles 0
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles /home/fillinmar/techno-ih2/cmake-build-debug/cmd/CMakeFiles/progress.marks
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/clean
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/clean
 .PHONY : clean
 
 # The main clean target
@@ -174,22 +174,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 cmd/CMakeFiles/main.dir/rule:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/CMakeFiles/main.dir/rule
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cmd/CMakeFiles/main.dir/rule
 .PHONY : cmd/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -199,7 +199,7 @@ main: cmd/CMakeFiles/main.dir/rule
 
 # fast build rule for target.
 main/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/build
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
 main.o: main.c.o
@@ -208,7 +208,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.o
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -217,7 +217,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.i
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -226,7 +226,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.s
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(MAKE) $(MAKESILENT) -f cmd/CMakeFiles/main.dir/build.make cmd/CMakeFiles/main.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -257,6 +257,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

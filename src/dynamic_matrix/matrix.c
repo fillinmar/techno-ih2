@@ -157,6 +157,7 @@ int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filena
 
     for (int i = 0; i < horizontal * horizontal * 0.5; ++i) {
         fprintf(f, "%4d", matrix[i]);
+       // printf("%4d ", matrix[i]);
     }
 
     if (fclose(f)) {

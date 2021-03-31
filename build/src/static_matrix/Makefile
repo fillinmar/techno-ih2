@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/build
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles /home/fillinmar/CLionProjects/hw_2/build/src/static_matrix/CMakeFiles/progress.marks
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles /home/fillinmar/techno-ih2/build/src/static_matrix/CMakeFiles/progress.marks
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/clean
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/static_matrix/CMakeFiles/static_matrix.dir/rule:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/CMakeFiles/static_matrix.dir/rule
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/static_matrix/CMakeFiles/static_matrix.dir/rule
 .PHONY : src/static_matrix/CMakeFiles/static_matrix.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ static_matrix: src/static_matrix/CMakeFiles/static_matrix.dir/rule
 
 # fast build rule for target.
 static_matrix/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/build
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/build
 .PHONY : static_matrix/fast
 
 matrix.o: matrix.c.o
@@ -188,7 +188,7 @@ matrix.o: matrix.c.o
 
 # target to build an object file
 matrix.c.o:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.o
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.o
 .PHONY : matrix.c.o
 
 matrix.i: matrix.c.i
@@ -197,7 +197,7 @@ matrix.i: matrix.c.i
 
 # target to preprocess a source file
 matrix.c.i:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.i
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.i
 .PHONY : matrix.c.i
 
 matrix.s: matrix.c.s
@@ -206,7 +206,7 @@ matrix.s: matrix.c.s
 
 # target to generate assembly for a file
 matrix.c.s:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.s
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/static_matrix/CMakeFiles/static_matrix.dir/build.make src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.s
 .PHONY : matrix.c.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

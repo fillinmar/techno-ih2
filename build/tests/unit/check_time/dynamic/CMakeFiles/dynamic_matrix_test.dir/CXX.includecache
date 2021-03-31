@@ -340,17 +340,15 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/main.cpp
+/home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/main.cpp
 gtest/gtest.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/matrix.cpp
-chrono
--
+/home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/matrix.cpp
 gtest/gtest.h
 -
 time.h
 -
 matrix.h
-/home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/matrix.h
+/home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/matrix.h
 

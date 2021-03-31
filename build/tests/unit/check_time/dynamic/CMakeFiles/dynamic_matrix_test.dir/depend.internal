@@ -22,7 +22,7 @@ tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.o
  ../vendor/googltest/googletest/include/gtest/internal/gtest-port.h
  ../vendor/googltest/googletest/include/gtest/internal/gtest-string.h
  ../vendor/googltest/googletest/include/gtest/internal/gtest-type-util.h
- /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/main.cpp
+ /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/main.cpp
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o
  ../src/dynamic_matrix/matrix.h
  ../vendor/googltest/googletest/include/gtest/gtest-death-test.h
@@ -45,4 +45,4 @@ tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o
  ../vendor/googltest/googletest/include/gtest/internal/gtest-port.h
  ../vendor/googltest/googletest/include/gtest/internal/gtest-string.h
  ../vendor/googltest/googletest/include/gtest/internal/gtest-type-util.h
- /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/matrix.cpp
+ /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/matrix.cpp

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/build
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,18 +67,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -135,16 +123,28 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles /home/fillinmar/CLionProjects/hw_2/build/tests/unit/check_time/static/CMakeFiles/progress.marks
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles /home/fillinmar/techno-ih2/build/tests/unit/check_time/static/CMakeFiles/progress.marks
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/clean
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,18 +154,87 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/rule:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/rule
+.PHONY : tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/rule
+
+# Convenience name for target.
+static_matrix_test: tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/rule
+
+.PHONY : static_matrix_test
+
+# fast build rule for target.
+static_matrix_test/fast:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build
+.PHONY : static_matrix_test/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+matrix.o: matrix.cpp.o
+
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.cpp.o:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/matrix.cpp.o
+.PHONY : matrix.cpp.o
+
+matrix.i: matrix.cpp.i
+
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.cpp.i:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/matrix.cpp.i
+.PHONY : matrix.cpp.i
+
+matrix.s: matrix.cpp.s
+
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.cpp.s:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/matrix.cpp.s
+.PHONY : matrix.cpp.s
 
 # Help Target
 help:
@@ -174,12 +243,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
+	@echo "... static_matrix_test"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
 .PHONY : help
 
 
@@ -191,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

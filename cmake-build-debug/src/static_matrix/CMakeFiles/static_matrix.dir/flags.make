@@ -6,5 +6,5 @@ C_FLAGS = --coverage -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/fillinmar/CLionProjects/hw_2/src/static_matrix 
+C_INCLUDES = -I/home/fillinmar/techno-ih2/src/static_matrix 
 

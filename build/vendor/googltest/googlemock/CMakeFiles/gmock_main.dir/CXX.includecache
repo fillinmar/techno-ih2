@@ -530,13 +530,13 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock_main.cc
+/home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock_main.cc
 iostream
 -
 gmock/gmock.h
-/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock/gmock.h
+/home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock/gmock.h
 gtest/gtest.h
-/home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gtest/gtest.h
+/home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gtest/gtest.h
 tchar.h
 -
 

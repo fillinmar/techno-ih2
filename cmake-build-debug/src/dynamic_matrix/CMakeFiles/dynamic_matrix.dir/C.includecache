@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix/matrix.c
+/home/fillinmar/techno-ih2/src/dynamic_matrix/matrix.c
 matrix.h
-/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix/matrix.h
+/home/fillinmar/techno-ih2/src/dynamic_matrix/matrix.h
 stdlib.h
 -
 stdio.h
@@ -20,7 +20,7 @@ sys/wait.h
 unistd.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix/matrix.h
+/home/fillinmar/techno-ih2/src/dynamic_matrix/matrix.h
 stdbool.h
 -
 stdio.h

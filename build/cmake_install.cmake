@@ -1,4 +1,4 @@
-# Install script for directory: /home/fillinmar/CLionProjects/hw_2
+# Install script for directory: /home/fillinmar/techno-ih2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,10 +39,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/fillinmar/CLionProjects/hw_2/build/src/cmake_install.cmake")
-  include("/home/fillinmar/CLionProjects/hw_2/build/cmd/cmake_install.cmake")
-  include("/home/fillinmar/CLionProjects/hw_2/build/vendor/googltest/cmake_install.cmake")
-  include("/home/fillinmar/CLionProjects/hw_2/build/tests/cmake_install.cmake")
+  include("/home/fillinmar/techno-ih2/build/src/cmake_install.cmake")
+  include("/home/fillinmar/techno-ih2/build/cmd/cmake_install.cmake")
+  include("/home/fillinmar/techno-ih2/build/vendor/googltest/cmake_install.cmake")
+  include("/home/fillinmar/techno-ih2/build/tests/cmake_install.cmake")
 
 endif()
 
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/fillinmar/CLionProjects/hw_2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/fillinmar/techno-ih2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

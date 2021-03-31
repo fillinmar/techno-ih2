@@ -6,5 +6,5 @@ C_FLAGS = --coverage -fPIC   -std=gnu99
 
 C_DEFINES = -Ddynamic_matrix_EXPORTS
 
-C_INCLUDES = -I/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix 
+C_INCLUDES = -I/home/fillinmar/techno-ih2/src/dynamic_matrix 
 

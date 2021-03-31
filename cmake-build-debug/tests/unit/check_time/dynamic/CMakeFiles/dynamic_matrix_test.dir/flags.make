@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -W
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/fillinmar/CLionProjects/hw_2/src/dynamic_matrix -isystem /home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest/include -isystem /home/fillinmar/CLionProjects/hw_2/vendor/googltest/googletest 
+CXX_INCLUDES = -I/home/fillinmar/techno-ih2/src/dynamic_matrix -isystem /home/fillinmar/techno-ih2/vendor/googltest/googletest/include -isystem /home/fillinmar/techno-ih2/vendor/googltest/googletest 
 

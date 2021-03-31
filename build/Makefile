@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/build
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles /home/fillinmar/techno-ih2/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -285,6 +285,19 @@ dynamic_matrix_test/fast:
 .PHONY : dynamic_matrix_test/fast
 
 #=============================================================================
+# Target rules for targets named static_matrix_test
+
+# Build rule for target.
+static_matrix_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 static_matrix_test
+.PHONY : static_matrix_test
+
+# fast build rule for target.
+static_matrix_test/fast:
+	$(MAKE) -f tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build.make tests/unit/check_time/static/CMakeFiles/static_matrix_test.dir/build
+.PHONY : static_matrix_test/fast
+
+#=============================================================================
 # Target rules for targets named dynamic_matrix_test_correct
 
 # Build rule for target.
@@ -296,6 +309,19 @@ dynamic_matrix_test_correct: cmake_check_build_system
 dynamic_matrix_test_correct/fast:
 	$(MAKE) -f tests/unit/matrix/dynamic_matrix/CMakeFiles/dynamic_matrix_test_correct.dir/build.make tests/unit/matrix/dynamic_matrix/CMakeFiles/dynamic_matrix_test_correct.dir/build
 .PHONY : dynamic_matrix_test_correct/fast
+
+#=============================================================================
+# Target rules for targets named static_matrix_test_correct
+
+# Build rule for target.
+static_matrix_test_correct: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 static_matrix_test_correct
+.PHONY : static_matrix_test_correct
+
+# fast build rule for target.
+static_matrix_test_correct/fast:
+	$(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build
+.PHONY : static_matrix_test_correct/fast
 
 # Help Target
 help:
@@ -319,7 +345,9 @@ help:
 	@echo "... gtest_main"
 	@echo "... gtest"
 	@echo "... dynamic_matrix_test"
+	@echo "... static_matrix_test"
 	@echo "... dynamic_matrix_test_correct"
+	@echo "... static_matrix_test_correct"
 .PHONY : help
 
 

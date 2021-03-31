@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/build
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles /home/fillinmar/CLionProjects/hw_2/build/src/menu/CMakeFiles/progress.marks
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles /home/fillinmar/techno-ih2/build/src/menu/CMakeFiles/progress.marks
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/clean
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/menu/CMakeFiles/menu.dir/rule:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/CMakeFiles/menu.dir/rule
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 src/menu/CMakeFiles/menu.dir/rule
 .PHONY : src/menu/CMakeFiles/menu.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ menu: src/menu/CMakeFiles/menu.dir/rule
 
 # fast build rule for target.
 menu/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/build
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/build
 .PHONY : menu/fast
 
 menu.o: menu.c.o
@@ -188,7 +188,7 @@ menu.o: menu.c.o
 
 # target to build an object file
 menu.c.o:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/menu.c.o
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/menu.c.o
 .PHONY : menu.c.o
 
 menu.i: menu.c.i
@@ -197,7 +197,7 @@ menu.i: menu.c.i
 
 # target to preprocess a source file
 menu.c.i:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/menu.c.i
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/menu.c.i
 .PHONY : menu.c.i
 
 menu.s: menu.c.s
@@ -206,7 +206,7 @@ menu.s: menu.c.s
 
 # target to generate assembly for a file
 menu.c.s:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/menu.c.s
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f src/menu/CMakeFiles/menu.dir/build.make src/menu/CMakeFiles/menu.dir/menu.c.s
 .PHONY : menu.c.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

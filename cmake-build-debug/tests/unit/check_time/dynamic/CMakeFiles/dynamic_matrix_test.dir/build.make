@@ -63,10 +63,10 @@ RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/depend.make
@@ -79,29 +79,29 @@ include tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/flags.m
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.o: tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/flags.make
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.o: ../tests/unit/check_time/dynamic/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.o"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamic_matrix_test.dir/main.cpp.o -c /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.o"
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamic_matrix_test.dir/main.cpp.o -c /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/main.cpp
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamic_matrix_test.dir/main.cpp.i"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/main.cpp > CMakeFiles/dynamic_matrix_test.dir/main.cpp.i
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/main.cpp > CMakeFiles/dynamic_matrix_test.dir/main.cpp.i
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamic_matrix_test.dir/main.cpp.s"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/main.cpp -o CMakeFiles/dynamic_matrix_test.dir/main.cpp.s
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/main.cpp -o CMakeFiles/dynamic_matrix_test.dir/main.cpp.s
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o: tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/flags.make
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o: ../tests/unit/check_time/dynamic/matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o -c /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o"
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.o -c /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/matrix.cpp
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.i"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/matrix.cpp > CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.i
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/matrix.cpp > CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.i
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.s"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic/matrix.cpp -o CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.s
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic/matrix.cpp -o CMakeFiles/dynamic_matrix_test.dir/matrix.cpp.s
 
 # Object files for target dynamic_matrix_test
 dynamic_matrix_test_OBJECTS = \
@@ -117,8 +117,8 @@ tests/unit/check_time/dynamic/dynamic_matrix_test: tests/unit/check_time/dynamic
 tests/unit/check_time/dynamic/dynamic_matrix_test: src/dynamic_matrix/libdynamic_matrix.so
 tests/unit/check_time/dynamic/dynamic_matrix_test: lib/libgtestd.a
 tests/unit/check_time/dynamic/dynamic_matrix_test: tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable dynamic_matrix_test"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dynamic_matrix_test.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable dynamic_matrix_test"
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dynamic_matrix_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/build: tests/unit/check_time/dynamic/dynamic_matrix_test
@@ -126,10 +126,10 @@ tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/build: tests/un
 .PHONY : tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/build
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/clean:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_matrix_test.dir/cmake_clean.cmake
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_matrix_test.dir/cmake_clean.cmake
 .PHONY : tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/clean
 
 tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/depend:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fillinmar/CLionProjects/hw_2 /home/fillinmar/CLionProjects/hw_2/tests/unit/check_time/dynamic /home/fillinmar/CLionProjects/hw_2/cmake-build-debug /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fillinmar/techno-ih2 /home/fillinmar/techno-ih2/tests/unit/check_time/dynamic /home/fillinmar/techno-ih2/cmake-build-debug /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic /home/fillinmar/techno-ih2/cmake-build-debug/tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tests/unit/check_time/dynamic/CMakeFiles/dynamic_matrix_test.dir/depend
 

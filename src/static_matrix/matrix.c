@@ -46,8 +46,7 @@ int make_file_start_matrix(Matrix matrix, const char *filename) {
 
 int make_file_with_mirror_matrix(Matrix *matrix, const char *filename) {
 
-    const char *file_name = "mirror_matrix.txt";
-    FILE *f = fopen(file_name, "wb");
+    FILE *f = fopen(filename, "wb");
 
     if (!f) {
         fprintf(stderr, "Failed to open file for write\n");

@@ -19,7 +19,8 @@ unset(parallel_algorithm CACHE)
 #if(tests)
 enable_testing()
 #
-add_subdirectory(vendor/googltest)
+find_package(GTest REQUIRED)
+find_package(Threads REQUIRED)
 #
 add_subdirectory(tests)
 #endif(tests)

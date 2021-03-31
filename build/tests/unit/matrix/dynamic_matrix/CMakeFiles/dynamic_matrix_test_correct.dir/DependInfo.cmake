@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/main.cpp" "/home/fillinmar/CLionProjects/hw_2/build/tests/unit/matrix/dynamic_matrix/CMakeFiles/dynamic_matrix_test_correct.dir/main.cpp.o"
-  "/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/matrix.cpp" "/home/fillinmar/CLionProjects/hw_2/build/tests/unit/matrix/dynamic_matrix/CMakeFiles/dynamic_matrix_test_correct.dir/matrix.cpp.o"
+  "/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/main.cpp" "/home/fillinmar/techno-ih2/build/tests/unit/matrix/dynamic_matrix/CMakeFiles/dynamic_matrix_test_correct.dir/main.cpp.o"
+  "/home/fillinmar/techno-ih2/tests/unit/matrix/dynamic_matrix/matrix.cpp" "/home/fillinmar/techno-ih2/build/tests/unit/matrix/dynamic_matrix/CMakeFiles/dynamic_matrix_test_correct.dir/matrix.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,8 +18,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/fillinmar/CLionProjects/hw_2/build/src/dynamic_matrix/CMakeFiles/dynamic_matrix.dir/DependInfo.cmake"
-  "/home/fillinmar/CLionProjects/hw_2/build/vendor/googltest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/fillinmar/techno-ih2/build/src/dynamic_matrix/CMakeFiles/dynamic_matrix.dir/DependInfo.cmake"
+  "/home/fillinmar/techno-ih2/build/vendor/googltest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

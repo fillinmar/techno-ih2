@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/fillinmar/CLionProjects/hw_2/src/static_matrix/matrix.c
+/home/fillinmar/techno-ih2/src/static_matrix/matrix.c
 matrix.h
-/home/fillinmar/CLionProjects/hw_2/src/static_matrix/matrix.h
+/home/fillinmar/techno-ih2/src/static_matrix/matrix.h
 stdlib.h
 -
 
-/home/fillinmar/CLionProjects/hw_2/src/static_matrix/matrix.h
+/home/fillinmar/techno-ih2/src/static_matrix/matrix.h
 stdbool.h
 -
 stdio.h

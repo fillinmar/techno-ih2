@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/build
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles /home/fillinmar/CLionProjects/hw_2/build/tests/unit/matrix/static_matrix/CMakeFiles/progress.marks
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/CLionProjects/hw_2/build/CMakeFiles 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles /home/fillinmar/techno-ih2/build/tests/unit/matrix/static_matrix/CMakeFiles/progress.marks
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fillinmar/techno-ih2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/clean
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,18 +154,87 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/preinstall
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/rule:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f CMakeFiles/Makefile2 tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/rule
+.PHONY : tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/rule
+
+# Convenience name for target.
+static_matrix_test_correct: tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/rule
+
+.PHONY : static_matrix_test_correct
+
+# fast build rule for target.
+static_matrix_test_correct/fast:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build
+.PHONY : static_matrix_test_correct/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+matrix.o: matrix.cpp.o
+
+.PHONY : matrix.o
+
+# target to build an object file
+matrix.cpp.o:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/matrix.cpp.o
+.PHONY : matrix.cpp.o
+
+matrix.i: matrix.cpp.i
+
+.PHONY : matrix.i
+
+# target to preprocess a source file
+matrix.cpp.i:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/matrix.cpp.i
+.PHONY : matrix.cpp.i
+
+matrix.s: matrix.cpp.s
+
+.PHONY : matrix.s
+
+# target to generate assembly for a file
+matrix.cpp.s:
+	cd /home/fillinmar/techno-ih2/build && $(MAKE) -f tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/build.make tests/unit/matrix/static_matrix/CMakeFiles/static_matrix_test_correct.dir/matrix.cpp.s
+.PHONY : matrix.cpp.s
 
 # Help Target
 help:
@@ -180,6 +249,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... static_matrix_test_correct"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... matrix.o"
+	@echo "... matrix.i"
+	@echo "... matrix.s"
 .PHONY : help
 
 
@@ -191,6 +267,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/fillinmar/CLionProjects/hw_2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/fillinmar/techno-ih2/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

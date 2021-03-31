@@ -63,10 +63,10 @@ RM = /snap/clion/145/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fillinmar/CLionProjects/hw_2
+CMAKE_SOURCE_DIR = /home/fillinmar/techno-ih2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fillinmar/CLionProjects/hw_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fillinmar/techno-ih2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/depend.make
@@ -79,16 +79,16 @@ include vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/flags.make
 
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/flags.make
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: ../vendor/googltest/googlemock/src/gmock_main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock_main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock_main.cc
 
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock_main.dir/src/gmock_main.cc.i"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock_main.cc > CMakeFiles/gmock_main.dir/src/gmock_main.cc.i
 
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock_main.dir/src/gmock_main.cc.s"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fillinmar/techno-ih2/vendor/googltest/googlemock/src/gmock_main.cc -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.s
 
 # Object files for target gmock_main
 gmock_main_OBJECTS = \
@@ -100,9 +100,9 @@ gmock_main_EXTERNAL_OBJECTS =
 lib/libgmock_maind.a: vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
 lib/libgmock_maind.a: vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/build.make
 lib/libgmock_maind.a: vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/CLionProjects/hw_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock_maind.a"
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fillinmar/techno-ih2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library ../../../lib/libgmock_maind.a"
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/build: lib/libgmock_maind.a
@@ -110,10 +110,10 @@ vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/build: lib/libgmock_maind.
 .PHONY : vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/build
 
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/clean:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
+	cd /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock_main.dir/cmake_clean.cmake
 .PHONY : vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/clean
 
 vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/depend:
-	cd /home/fillinmar/CLionProjects/hw_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fillinmar/CLionProjects/hw_2 /home/fillinmar/CLionProjects/hw_2/vendor/googltest/googlemock /home/fillinmar/CLionProjects/hw_2/cmake-build-debug /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock /home/fillinmar/CLionProjects/hw_2/cmake-build-debug/vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fillinmar/techno-ih2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fillinmar/techno-ih2 /home/fillinmar/techno-ih2/vendor/googltest/googlemock /home/fillinmar/techno-ih2/cmake-build-debug /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock /home/fillinmar/techno-ih2/cmake-build-debug/vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : vendor/googltest/googlemock/CMakeFiles/gmock_main.dir/depend
 

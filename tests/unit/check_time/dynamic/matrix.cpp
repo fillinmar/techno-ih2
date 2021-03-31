@@ -1,11 +1,9 @@
 //
 // Created by fillinmar on 31.03.2021.
 //
-#include <chrono>
+
 #include <gtest/gtest.h>
 #include <time.h>
-
-//using namespace std;
 
 extern "C" {
 #include "matrix.h"
@@ -15,8 +13,8 @@ const int test_count = 5;
 int test_vert = 100;
 int test_hor = 200;
 
-const char *test_filename = "file_with_matrix/test_matrix.txt";
-const char *test_final_filename = "file_with_matrix/test_final_matrix.txt";
+const char *test_filename = "test_matrix.txt";
+const char *test_final_filename = "test_final_matrix.txt";
 
 TEST(MATRIX, TIME_TO_MAKE) {
 
@@ -29,6 +27,7 @@ TEST(MATRIX, TIME_TO_MAKE) {
             printf("Failed to allocate memory for static_matrix..\n");
         EXPECT_TRUE(!make_file_start_matrix(*test_matrix, test_filename));
         read_and_fill_matrix(*test_matrix, test_filename);
+        EXPECT_TRUE(!make_mirror_matrix_with_file(test_matrix, test_final_filename));
         free_matrix(test_matrix);
     }
     clock_t end = clock();
