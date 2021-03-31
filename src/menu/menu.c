@@ -7,12 +7,12 @@
 
 
 int create_menu() {
-    const char* file_name = "start_matrix.txt";
-    const char* file_name_of_final_matrix = "mirror_matrix.txt";
+    const char *file_name = "start_matrix.txt";
+    const char *file_name_of_final_matrix = "mirror_matrix.txt";
     clock_t begin = clock();
 
-    int vert = 0;
-    int hor = 0;
+    int vert = 500;
+    int hor = 1000;
     Matrix *matrix = create_matrix(&hor, &vert);
     if (matrix == NULL)
         printf("Failed to allocate memory for static_matrix..\n");
@@ -29,7 +29,7 @@ int create_menu() {
 
     printf("\n");
     clock_t end = clock();
-    double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+    double time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
     printf("Time to mirror matrix in  %f seconds.\n", time_spent);
     return 0;
 }

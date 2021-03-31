@@ -147,7 +147,6 @@ int make_file_start_matrix(Matrix matrix, const char *filename) {
 }
 
 int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filename) {
-    // const char *file_name = "mirror_matrix.txt";
     FILE *f = fopen(filename, "wb");
 
     if (!f) {
@@ -210,31 +209,6 @@ int read_and_fill_matrix(Matrix matrix, const char *filename) {
     }
     fclose(f);
     return 0;
-}
-
-//void read_and_fill_matrix(Matrix matrix, char* file_sourse_matrix) {
-//    int temp = 0;
-//    FILE *f = fopen("static_matrix.txt", "rt");
-//    for (int i = 0; i < matrix.vertical / 2 + (matrix.vertical % 2); ++i) {
-//        for (int j = 0; j < matrix.horizontal; ++j) {
-//            fscanf(f, "%d", &temp);
-//            matrix.array[i][j] = temp;
-//        }
-//    }
-//
-//    for (int i = matrix.vertical / 2 - 1; i >= 0; --i) {
-//        for (int j = matrix.horizontal; j < matrix.horizontal * 2; ++j) {
-//            fscanf(f, "%d", &temp);
-//            matrix.array[i][j] = temp;
-//        }
-//    }
-//    fclose(f);
-//}
-void swap(int *a, int *b) {
-    int t;
-    t = *a;
-    *a = *b;
-    *b = t;
 }
 
 void free_matrix(Matrix *mart) {

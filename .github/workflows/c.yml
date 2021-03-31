@@ -23,14 +23,14 @@ jobs:
       - name: running tests
         run: make run-all-tests
 
-#      - name: running valgrind
-#        run: make run-all-vg-check
-#
-#      - name: running test coverage
-#        run: make get-all-coverage
-#
-#      - name: get code coverage
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: coverage
-#          path: coverage/
+      - name: running valgrind
+        run: make run-all-vg-check
+
+      - name: running test coverage
+        run: make get-all-coverage
+
+      - name: get code coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
