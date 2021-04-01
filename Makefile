@@ -30,7 +30,7 @@ make run-matrix-static-test \
 run-valgrind-check:
 	valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --undef-value-errors=no --verbose $(dir)
 
-run-valgrind-test-matrix-dynamic:
+run-valgrind-test-matrix-parallel:
 	cd $(BUILD_DIR)/tests/unit/matrix/parallel_matrix \
 		make run-valgrind-check dir=./parallel_matrix_test_correct
 
@@ -39,8 +39,8 @@ run-valgrind-test-matrix-static:
 		make run-valgrind-check dir = ./static_matrix_test_correct
 
 run-all-vg-check:
-	make run-valgrind-test-matrix-dynamic \
-			&& make run-valgrind-test-matrix-dynamic
+	make run-valgrind-test-matrix-parallel \
+			&& make run-valgrind-test-matrix-static
 
 # CODE COVERAGE :
 get-gcov:

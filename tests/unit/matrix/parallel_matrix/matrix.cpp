@@ -37,11 +37,11 @@ bool compareFiles(const char *filename1, const char *filename2) {
     }
 }
 
-TEST(MATRIX, MIRROR_PARALLEL_MATRIX
+TEST(MATRIX, MIRROR_STATIC_MATRIX
 ) {
     Matrix *test_matrix = create_matrix(&test1_hor, &test1_vert);
     if (test_matrix == NULL)
-        printf("Failed to allocate memory for parallel_matrix..\n");
+        printf("Failed to allocate memory for static_matrix..\n");
     read_and_fill_matrix(*test_matrix, test_filename);
     EXPECT_TRUE(!make_mirror_matrix_with_file(test_matrix, test_final_filename));
     EXPECT_TRUE(compareFiles(test_final_filename, test_expect_filename));
