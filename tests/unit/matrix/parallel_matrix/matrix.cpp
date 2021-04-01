@@ -20,7 +20,11 @@ bool compareFiles(const char *filename1, const char *filename2) {
     int ch1 = 0, ch2 = 0;
 
     FILE *f1 = fopen(filename2, "r");
+    if (!f1)
+        printf ("somethig with file1");
     FILE *f2 = fopen(filename1, "r");
+    if (!f1)
+        printf ("somethig with file2");
 
 
     while (!feof(f1) && !feof(f2) && (ch1 == ch2)) {

@@ -44,7 +44,7 @@ TEST(MATRIX, MIRROR_STATIC_MATRIX
         printf("Failed to allocate memory for static_matrix..\n");
     read_and_fill_matrix(*test_matrix, test_filename);
     EXPECT_TRUE(!make_mirror_matrix_with_file(test_matrix, test_final_filename));
-    //EXPECT_TRUE(compareFiles(test_final_filename, test_expect_filename));
+    EXPECT_TRUE(compareFiles(test_final_filename, test_expect_filename));
     free_matrix(test_matrix);
     printf("\n");
 
