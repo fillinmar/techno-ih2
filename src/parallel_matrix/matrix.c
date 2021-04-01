@@ -58,8 +58,8 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
             return 0;
         }
     }
-    printf("my matrix is");
-    print_final_matrix(mirror_paral_matrix, matrix->horizontal);
+//    printf("my matrix is");
+//    print_final_matrix(mirror_paral_matrix, matrix->horizontal);
 
     free(pids);
 
@@ -105,7 +105,7 @@ void child_procces_work(int *mirror_paral_matrix, Matrix *matrix, int count_of_p
 int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filename) {
     if (!filename)
         return 4;
-    FILE *f = fopen(filename, "w");
+    FILE *f = fopen(filename, "w+");
     if (!f)
         return 4;
 
