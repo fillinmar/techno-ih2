@@ -28,6 +28,7 @@ void print_final_matrix(int *matrix, int horizontal);
 
 int make_mirror_matrix_with_file(Matrix *matrix, const char *filename);
 
+void child_procces_work(int*mirror_paral_matrix, Matrix *matrix, int count_of_process, int i,int *count_of_passed, int *index_of_diagonal);
 
 void free_matrix(Matrix *mart);
 

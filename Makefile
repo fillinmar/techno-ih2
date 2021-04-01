@@ -22,7 +22,8 @@ run-matrix-static-test:
 
 run-all-tests:
 	 make run-matrix-parallel-test \
-                                  && make run-matrix-static-test \
+		&& make run-matrix-static-test \
+            && make run-all-time-test
 
 # VALGRIND RUNNING :
 run-valgrind-check:

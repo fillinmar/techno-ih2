@@ -37,7 +37,7 @@ bool compareFiles(const char *filename1, const char *filename2) {
     }
 }
 
-TEST(MATRIX, MIRROR_STATIC_SMALL_MATRIX
+TEST(MATRIX, MIRROR_STATIC_MATRIX
 ) {
     Matrix *test_matrix = create_matrix(&test1_hor, &test1_vert);
     if (test_matrix == NULL)

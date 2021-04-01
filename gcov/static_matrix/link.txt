@@ -1,2 +1,0 @@
-/usr/bin/ar qc libstatic_matrix.a  CMakeFiles/static_matrix.dir/matrix.c.o
-/usr/bin/ranlib libstatic_matrix.a

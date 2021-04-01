@@ -18,7 +18,7 @@ Matrix *create_matrix(int *horizontal, int *vertical);
 
 int make_file_start_matrix(Matrix matrix, const char *filename);
 
-void read_and_fill_matrix(Matrix matrix_to_generate, const char *filename);
+int read_and_fill_matrix(Matrix matrix_to_generate, const char *filename);
 
 void swap(int *a, int *b);
 

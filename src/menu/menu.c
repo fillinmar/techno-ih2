@@ -12,16 +12,21 @@ int create_menu() {
     int hor = 10;
     Matrix *matrix = create_matrix(&hor, &vert);
     if (matrix == NULL)
-        printf("Failed to allocate memory for static_matrix..\n");
+        printf("Failed to allocate memory for smatrix..\n");
 
-    if (make_file_start_matrix(*matrix, file_name))
-        printf("Something went wrong");
+    if (make_file_start_matrix(*matrix, file_name) == 2)
+        printf("Something went wrong with making file with matrix");
 
-    read_and_fill_matrix(*matrix, file_name);
+    if (read_and_fill_matrix(*matrix, file_name) == 3)
+        printf("Something went wrong with open file with matrix");
 
-    if (make_mirror_matrix_with_file(matrix, file_name_of_final_matrix)) {
-        printf("Something went wrong");
-    }
+    int result_of_funk = make_mirror_matrix_with_file(matrix, file_name_of_final_matrix);
+    if (result_of_funk == 4)
+        printf("Something went wrong with making file with mirror matrix");
+    else if (result_of_funk == 6)
+        printf("Failed to allocate memory during making mirror matrix..");
+    else if (result_of_funk == 5)
+        printf("Failed to map during making mirror matrix..");
 
     free_matrix(matrix);
     return 0;
