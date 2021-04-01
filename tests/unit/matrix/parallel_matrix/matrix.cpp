@@ -13,8 +13,8 @@ const char *test_final_filename = "file_with_matrix/test_final_matrix.txt";
 const char *test_expect_filename = "file_with_matrix/test_expect_matrix.txt";
 
 
-int test1_vert = 2;
-int test1_hor = 4;
+int test1_vert = 5;
+int test1_hor = 10;
 
 bool compareFiles(const char *filename1, const char *filename2) {
     int ch1 = 0, ch2 = 0;
@@ -37,7 +37,7 @@ bool compareFiles(const char *filename1, const char *filename2) {
     }
 }
 
-TEST(MATRIX, MIRROR_DYNAMIC_SMALL_MATRIX
+TEST(MATRIX, MIRROR_DINAMIC_MATRIX
 ) {
     Matrix *test_matrix = create_matrix(&test1_hor, &test1_vert);
     if (test_matrix == NULL)

@@ -1,21 +1,21 @@
 //
-// Created by fillinmar on 31.03.2021.
+// Created by fillinmar on 01.04.2021.
 //
-#include <gtest/gtest.h>
-#include <time.h>
 
-extern "C" {
+
+#include <time.h>
 #include "matrix.h"
-}
+#include <stdio.h>
+
 
 const int test_count = 5;
-int test_vert = 100;
-int test_hor = 200;
+int test_vert = 5;
+int test_hor = 10;
 
 const char *test_filename = "test_matrix.txt";
 const char *test_final_filename = "test_final_matrix.txt";
 
-TEST(MATRIX, TIME_TO_MAKE) {
+int main() {
 
     clock_t begin = clock();
 
@@ -24,13 +24,16 @@ TEST(MATRIX, TIME_TO_MAKE) {
         Matrix *test_matrix = create_matrix(&test_hor, &test_vert);
         if (test_matrix == NULL)
             printf("Failed to allocate memory for static_matrix..\n");
-        EXPECT_TRUE(!make_file_start_matrix(*test_matrix, test_filename));
+
+        make_file_start_matrix(*test_matrix, test_filename);
         read_and_fill_matrix(*test_matrix, test_filename);
-        EXPECT_TRUE(!make_mirror_matrix_with_file(test_matrix, test_final_filename));
+
+        make_mirror_matrix_with_file(test_matrix, test_final_filename);
         free_matrix(test_matrix);
     }
     clock_t end = clock();
 
     double time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
-    std::cout << "Time to mirror matrix in seconds" << time_spent << std::endl;
+    printf("Time to mirror parallel matrix in seconds: %f\n", time_spent);
+    return 0;
 }

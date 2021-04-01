@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.2)
 project(hw_2 C CXX)
 
-option(parallel_algorithm "Build parallel matrix" OFF)
+option(parallel_algorithm "Build parallel matrix" ON)
 option(tests "Build all tests." ON)
 
 set(CMAKE_CXX_FLAGS         "-Wall -Wno-unknown-pragmas -Wno-sign-compare -Woverloaded-virtual -Wwrite-strings -Wno-unused -Werror -Wpedantic")

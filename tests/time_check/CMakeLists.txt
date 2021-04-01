@@ -1,0 +1,2 @@
+add_subdirectory(parallel_time)
+add_subdirectory(static_time)

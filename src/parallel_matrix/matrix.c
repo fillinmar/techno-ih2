@@ -10,10 +10,11 @@
 #include <unistd.h>
 
 int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
+    if (!filename)
+        return 1;
     int *index_of_diagonal = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE,
                                   MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!index_of_diagonal) {
-        printf("Failed to map\n");
         return 1;
     }
     *index_of_diagonal = matrix->horizontal;
@@ -21,7 +22,6 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
     int *count_of_passed = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE,
                                 MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!count_of_passed) {
-        printf("Failed to map\n");
         return 1;
     }
     *count_of_passed = 0;
@@ -32,24 +32,21 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
     int *mirror_paral_matrix = mmap(NULL, size_of_martix, PROT_READ | PROT_WRITE,
                                     MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!mirror_paral_matrix) {
-        printf("Failed to map\n");
         return 1;
     }
 
     int count_of_process = matrix->vertical / 2 + matrix->vertical % 2;
     int *pids = (int *) calloc(count_of_process, sizeof(int));
+    if (!pids)
+        return 1;
     int middle_of_array = matrix->vertical / 2;
 
     for (int i = 0; i < count_of_process; ++i) {
         pids[i] = fork();
-        if (pids[i] != 0)
-            continue;
         if (pids[i] == -1) {
             printf("Fork failed\n");
-            if (munmap(mirror_paral_matrix, size_of_martix)) {
-                printf("Failed to unmap\n");
-            }
-            return 1;
+            if (munmap(mirror_paral_matrix, size_of_martix))
+                return 1;
         }
         if (pids[i] == 0) {
             if (matrix->vertical % 2 == 1 && i == count_of_process - 1) {
@@ -71,7 +68,6 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
                         mirror_paral_matrix[(*count_of_passed) + j] = matrix->array[i][matrix->horizontal * 2 - j - 1];
                         mirror_paral_matrix[matrix->horizontal * matrix->vertical - 1 - j -
                                             *count_of_passed] = matrix->array[i][j];
-                        //printf("%d %d %d " , mirror_paral_matrix[i * (*count_of_passed) + j] , i * (*count_of_passed) + j, *count_of_passed);
                     } else {
                         mirror_paral_matrix[(*count_of_passed) + j] = matrix->array[i][j];
                         mirror_paral_matrix[matrix->horizontal * matrix->vertical - 1 - j -
@@ -96,7 +92,6 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
     }
 
     free(pids);
-    //print_final_matrix(mirror_paral_matrix, static_matrix->horizontal);
 
     make_file_with_mirror_matrix(mirror_paral_matrix, matrix->horizontal, filename);
     return 0;
@@ -125,39 +120,37 @@ void print_start_matrix(Matrix matrix) {
 }
 
 int make_file_start_matrix(Matrix matrix, const char *filename) {
+    if (!filename)
+        return 1;
     const char *mode = "w+";
 
     FILE *file = fopen(filename, mode);
-    if (!file) {
-        fprintf(stderr, "Failed to open file for read\n");
+    if (!file)
         return 1;
-    }
     for (int i = 0; i < matrix.horizontal * matrix.vertical; ++i) {
         fprintf(file, "%4d", rand() % 100);
     }
     if (fclose(file)) {
-        fprintf(stderr, "Failed to close file\n");
         return 1;
     }
     return 0;
 }
 
 int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filename) {
-    FILE *f = fopen(filename, "wb");
-
-    if (!f) {
-        fprintf(stderr, "Failed to open file for write\n");
+    if (!filename)
         return 1;
-    }
+
+    FILE *f = fopen(filename, "wb");
+    if (!f)
+        return 1;
 
     for (int i = 0; i < horizontal * horizontal * 0.5; ++i) {
         fprintf(f, "%4d", matrix[i]);
     }
 
-    if (fclose(f)) {
-        fprintf(stderr, "Failed to close file\n");
+    if (fclose(f))
         return 1;
-    }
+
     return 0;
 }
 

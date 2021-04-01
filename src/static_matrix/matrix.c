@@ -24,34 +24,32 @@ void print_final_matrix(Matrix *matrix) {
 }
 
 int make_file_start_matrix(Matrix matrix, const char *filename) {
-    //const char *filename = "static_matrix.txt";
-    const char *mode = "w";
+    if (!filename)
+        return 1;
 
+    const char *mode = "w";
     FILE *file;
     file = fopen(filename, mode);
-    if (!file) {
-        fprintf(stderr, "Failed to open file for read\n");
+    if (!file)
         return 1;
-    }
+
     for (int i = 0; i < matrix.horizontal * matrix.vertical; ++i) {
         fprintf(file, "%4d", rand() % 100);
+    }
 
-    }
-    if (fclose(file)) {
-        fprintf(stderr, "Failed to close file\n");
+    if (fclose(file))
         return 1;
-    }
     return 0;
 }
 
 int make_file_with_mirror_matrix(Matrix *matrix, const char *filename) {
+    if (!filename)
+        return 1;
 
     FILE *f = fopen(filename, "wb");
 
-    if (!f) {
-        fprintf(stderr, "Failed to open file for write\n");
+    if (!f)
         return 1;
-    }
 
     for (int i = 0; i < matrix->vertical; ++i) {
         for (int j = 0; j < matrix->horizontal; j++) {
@@ -59,10 +57,8 @@ int make_file_with_mirror_matrix(Matrix *matrix, const char *filename) {
         }
     }
 
-    if (fclose(f)) {
-        fprintf(stderr, "Failed to close file\n");
+    if (fclose(f))
         return 1;
-    }
     return 0;
 }
 

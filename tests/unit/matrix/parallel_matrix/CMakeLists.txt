@@ -1,11 +1,11 @@
 file(GLOB SRCS *.cpp)
 
-project(dynamic_matrix_test_correct)
+project(parallel_matrix_test_correct)
 
 ADD_EXECUTABLE(${PROJECT_NAME} ${SRCS})
 
 TARGET_LINK_LIBRARIES(${PROJECT_NAME}
-        dynamic_matrix
+        parallel_matrix
         ${GTEST_LIBRARIES} Threads::Threads
         )
 
