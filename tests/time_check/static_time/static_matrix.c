@@ -8,8 +8,8 @@
 
 
 const int test_count = 20;
-int test_vert = 50;
-int test_hor = 100;
+int test_vert = 500;
+int test_hor = 1000;
 
 const char *test_filename = "test_matrix.txt";
 const char *test_final_filename = "test_final_matrix.txt";
