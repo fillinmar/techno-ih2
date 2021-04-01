@@ -57,5 +57,4 @@ TEST(MATRIX, MIRROR_PARALLEL_MATRIX
     EXPECT_TRUE(compareFiles(test_final_filename, test_expect_filename));
     free_matrix(test_matrix);
     printf("\n");
-
 }

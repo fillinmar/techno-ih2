@@ -46,7 +46,7 @@ int make_file_with_mirror_matrix(Matrix *matrix, const char *filename) {
     if (!filename)
         return 4;
 
-    FILE *f = fopen(filename, "wb");
+    FILE *f = fopen(filename, "w+");
 
     if (!f)
         return 4;
