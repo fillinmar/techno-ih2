@@ -9,9 +9,9 @@ extern "C" {
 #include "matrix.h"
 }
 
-const int test_count = 5;
-int test_vert = 100;
-int test_hor = 200;
+const int test_count = 500;
+int test_vert = 5000;
+int test_hor = 10000;
 
 const char *test_filename = "test_matrix.txt";
 const char *test_final_filename = "test_final_matrix.txt";
