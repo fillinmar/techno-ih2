@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC --coverage  -shared -Wl,-soname,libparallel_matrix.so -o libparallel_matrix.so CMakeFiles/parallel_matrix.dir/matrix.c.o 

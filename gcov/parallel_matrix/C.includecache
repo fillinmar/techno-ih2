@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fillinmar/semc++/techno-ih2/src/parallel_matrix/matrix.c
+matrix.h
+/home/fillinmar/semc++/techno-ih2/src/parallel_matrix/matrix.h
+stdlib.h
+-
+stdio.h
+-
+sys/mman.h
+-
+sys/wait.h
+-
+unistd.h
+-
+
+/home/fillinmar/semc++/techno-ih2/src/parallel_matrix/matrix.h
+stdbool.h
+-
+stdio.h
+-
+

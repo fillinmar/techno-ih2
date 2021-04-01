@@ -48,7 +48,7 @@ get-gcov-static-matrix:
 	make get-gcov output=gcov/static_matrix file=../../build/src/static_matrix/CMakeFiles/static_matrix.dir/matrix.c.gcno path=../../build/src/static_matrix/CMakeFiles/static_matrix.dir/.
 
 get-gcov-parallel-matrix:
-	make get-gcov output=gcov/dynamic_matrix file=../../build/src/parallel_matrix/CMakeFiles/parallel_matrix.dir/matrix.c.gcno path=../../build/src/parallel_matrix/CMakeFiles/parallel_matrix.dir/.
+	make get-gcov output=gcov/parallel_matrix file=../../build/src/parallel_matrix/CMakeFiles/parallel_matrix.dir/matrix.c.gcno path=../../build/src/parallel_matrix/CMakeFiles/parallel_matrix.dir/.
 
 get-gcov-all:
 	mkdir gcov && make get-gcov-static-matrix && make get-gcov-parallel-matrix
@@ -59,7 +59,7 @@ get-lcov:
 get-lcov-static-matrix:
 	mkdir coverage/static_matrix && make get-lcov directory=gcov/static_matrix output_filename=coverage/static_matrix/static_matrix
 
-get-lcov-dynamic-matrix:
+get-lcov-parallel-matrix:
 	mkdir coverage/parallel_matrix && make get-lcov directory=gcov/parallel_matrix output_filename=coverage/parallel_matrix/parallel_matrix
 
 get-lcov-all:
