@@ -46,10 +46,12 @@ bool compareFiles(const char *filename1, const char *filename2) {
 
 TEST(MATRIX, MIRROR_PARALLEL_MATRIX
 ) {
+    printf("im hear..\n");
     Matrix *test_matrix = create_matrix(&test1_hor, &test1_vert);
     if (test_matrix == NULL)
         printf("Failed to allocate memory for static_matrix..\n");
-    read_and_fill_matrix(*test_matrix, test_filename);
+    EXPECT_TRUE(!read_and_fill_matrix(*test_matrix, test_filename));
+    printf("i feel..\n");
     EXPECT_TRUE(!make_mirror_matrix_with_file(test_matrix, test_final_filename));
     printf("I did file..\n");
     EXPECT_TRUE(compareFiles(test_final_filename, test_expect_filename));
