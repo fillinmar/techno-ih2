@@ -58,8 +58,6 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
             return 0;
         }
     }
-    printf("my matrix is");
-    print_final_matrix(mirror_paral_matrix, matrix->horizontal);
 
     free(pids);
 

@@ -20,7 +20,10 @@ jobs:
       - name: building project
         run: make build-project
 
-      - name: running tests
+      - name: running time tests
+              run: run-all-time-test
+
+     - name: running tests
         run: make run-all-tests
 
       - name: running valgrind
