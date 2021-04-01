@@ -125,9 +125,6 @@ void print_start_matrix(Matrix matrix) {
 }
 
 int make_file_start_matrix(Matrix matrix, const char *filename) {
-    //const char *filename1 = "/home/fillinmar/CLionProjects/hw_2/tests/unit/matrix/dynamic_matrix/file_with_matrix/test_expect_matrix.txt";
-
-    //const char *filename = "static_matrix.txt";
     const char *mode = "w+";
 
     FILE *file = fopen(filename, mode);
@@ -137,7 +134,6 @@ int make_file_start_matrix(Matrix matrix, const char *filename) {
     }
     for (int i = 0; i < matrix.horizontal * matrix.vertical; ++i) {
         fprintf(file, "%4d", rand() % 100);
-        //fprintf(file, "%4d", i+1);
     }
     if (fclose(file)) {
         fprintf(stderr, "Failed to close file\n");
@@ -156,7 +152,6 @@ int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filena
 
     for (int i = 0; i < horizontal * horizontal * 0.5; ++i) {
         fprintf(f, "%4d", matrix[i]);
-       // printf("%4d ", matrix[i]);
     }
 
     if (fclose(f)) {

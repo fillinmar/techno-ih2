@@ -8,7 +8,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "matrix.h"
-//#include "paral.h"
 
 int create_menu();
 

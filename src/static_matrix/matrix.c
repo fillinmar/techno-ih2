@@ -75,8 +75,6 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
         k = k + 2;
     }
 
-    //print_final_matrix(static_matrix);
-
     if (make_file_with_mirror_matrix(matrix, filename))
         printf("error with file");
     return 0;

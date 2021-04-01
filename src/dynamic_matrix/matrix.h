@@ -16,13 +16,11 @@ typedef struct {
 
 Matrix *create_matrix(int *horizontal, int *vertical);
 
-int make_file_start_matrix(Matrix matrix, const char *filename );
+int make_file_start_matrix(Matrix matrix, const char *filename);
 
 int read_and_fill_matrix(Matrix matrix, const char *filename);
 
 void print_start_matrix(Matrix matrix);
-
-//void swap(int *a, int *b);
 
 int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filename);
 

@@ -28,9 +28,8 @@ void print_final_matrix(Matrix *matrix);
 
 int make_mirror_matrix_with_file(Matrix *matrix, const char *filename);
 
-
-
 int make_file_with_mirror_matrix(Matrix *matrix, const char *filename);
+
 void free_matrix(Matrix *mart);
 
 #endif //HW_2_MATRIX_H

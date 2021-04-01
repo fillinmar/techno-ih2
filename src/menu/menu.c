@@ -3,13 +3,10 @@
 //
 #include <stdio.h>
 #include "menu.h"
-#include <time.h>
-
 
 int create_menu() {
     const char *file_name = "start_matrix.txt";
     const char *file_name_of_final_matrix = "mirror_matrix.txt";
-    clock_t begin = clock();
 
     int vert = 500;
     int hor = 1000;
@@ -26,10 +23,5 @@ int create_menu() {
     }
 
     free_matrix(matrix);
-
-    printf("\n");
-    clock_t end = clock();
-    double time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
-    printf("Time to mirror matrix in  %f seconds.\n", time_spent);
     return 0;
 }
