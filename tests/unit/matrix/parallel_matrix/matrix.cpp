@@ -10,7 +10,7 @@ extern "C" {
 }
 
 const char *test_filename = "file_with_matrix/test_matrix.txt";
-const char *test_final_filename = "file_with_matrix/test_final_matrix.txt";
+const char *test_final_filename = "test_final_matrix.txt";
 const char *test_expect_filename = "file_with_matrix/test_expect_matrix.txt";
 
 int test1_vert = 5;
