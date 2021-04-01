@@ -49,10 +49,3 @@ TEST(MATRIX, MIRROR_DYNAMIC_SMALL_MATRIX
     printf("\n");
 
 }
-
-//TEST(MATRIX, MIRROR_DYNAMIC_NOT_SO_SMALL_MATRIX
-//)
-//{
-//Total *res = collect_size(nullptr, point_counter);
-//EXPECT_TRUE(!res);
-//}
