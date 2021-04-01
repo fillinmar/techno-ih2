@@ -14,7 +14,7 @@ run-check-time-static-test:
 run-all-time-test:
 	 make run-check-time-parallel-test \
                                   && make run-check-time-static-test
-                                  
+
 run-matrix-parallel-test:
 	cd $(BUILD_DIR)/tests/unit/matrix/parallel_matrix \
 		&& ./parallel_matrix_test_correct
