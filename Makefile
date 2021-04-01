@@ -6,12 +6,15 @@ build-project:
 run-check-time-parallel-test:
 	cd $(BUILD_DIR)/tests/time_check/parallel_time \
 		&& ./time_check_parallel_test
+
 run-check-time-static-test:
 	cd $(BUILD_DIR)/tests/time_check/static_time \
 		&& ./time_check_static_test
+
 run-all-time-test:
 	 make run-check-time-parallel-test \
                                   && make run-check-time-static-test
+                                  
 run-matrix-parallel-test:
 	cd $(BUILD_DIR)/tests/unit/matrix/parallel_matrix \
 		&& ./parallel_matrix_test_correct
