@@ -147,7 +147,7 @@ int make_file_start_matrix(Matrix matrix, const char *filename) {
     if (!file)
         return 2;
     for (int i = 0; i < matrix.horizontal * matrix.vertical; ++i) {
-        fprintf(file, "%4d", rand() % 100);
+        fprintf(file, "%d", rand() % 100);
     }
     if (fclose(file)) {
         return 2;
