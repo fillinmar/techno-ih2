@@ -21,10 +21,10 @@ jobs:
         run: make build-project
 
       - name: running time tests
-              run: run-all-time-test
+      run: make run-all-time-test
 
-     - name: running tests
-        run: make run-all-tests
+      - name: running tests
+          run: make run-all-tests
 
       - name: running valgrind
         run: make run-all-vg-check
