@@ -16,7 +16,7 @@ run-all-time-test:
                                   && make run-check-time-static-test
 
 run-matrix-parallel-test:
-	cd $(BUILD_DIR)/tests/unit/matrix/parallel_matrix \
+	cd $(BUILD_DIR)/tests/unit/parallel_matrix \
 		&& ./parallel_matrix_test_correct
 
 run-matrix-static-test:
@@ -24,15 +24,15 @@ run-matrix-static-test:
 		&& ./static_matrix_test_correct
 
 run-all-tests:
-	 make run-matrix-static-test
-		#&& make run-matrix-parallel-test
+	 make run-matrix-static-test \
+		&& make run-matrix-parallel-test
 
 # VALGRIND RUNNING :
 run-valgrind-check:
 	valgrind --tool=memcheck --leak-check=full --show-leak-kinds=all --undef-value-errors=no --verbose $(dir)
 
 run-valgrind-test-matrix-parallel:
-	cd $(BUILD_DIR)/tests/unit/matrix/parallel_matrix \
+	cd $(BUILD_DIR)/tests/unit/parallel_matrix \
 		make run-valgrind-check dir=./parallel_matrix_test_correct
 
 run-valgrind-test-matrix-static:

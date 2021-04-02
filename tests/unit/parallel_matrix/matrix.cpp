@@ -10,7 +10,7 @@ extern "C" {
 }
 
 const char *test_filename = "file_with_matrix/test_matrix.txt";
-const char *test_final_filename = "test_final_matrix.txt";
+const char *test_final_filename = "file_with_matrix/test_final_matrix.txt";
 const char *test_expect_filename = "file_with_matrix/test_expect_matrix.txt";
 
 int test1_vert = 5;
@@ -20,18 +20,11 @@ bool compareFiles(const char *filename1, const char *filename2) {
     int ch1 = 0, ch2 = 0;
 
     FILE *f1 = fopen(filename2, "r");
-    if (!f1)
-        printf ("somethig with file1");
     FILE *f2 = fopen(filename1, "r");
-    if (!f1)
-        printf ("somethig with file2");
-
 
     while (!feof(f1) && !feof(f2) && (ch1 == ch2)) {
         fscanf(f1, "%d", &ch1);
-        printf("%d", ch1);
         fscanf(f2, "%d", &ch2);
-        printf("%d", ch2);
     }
 
     fclose(f2);
@@ -46,14 +39,13 @@ bool compareFiles(const char *filename1, const char *filename2) {
 
 TEST(MATRIX, MIRROR_PARALLEL_MATRIX
 ) {
-    //printf("im hear..\n");
     Matrix *test_matrix = create_matrix(&test1_hor, &test1_vert);
     if (test_matrix == NULL)
         printf("Failed to allocate memory for static_matrix..\n");
-    EXPECT_TRUE(!read_and_fill_matrix(*test_matrix, test_filename));
-    //printf("i feel..\n");
+    read_and_fill_matrix(*test_matrix, test_filename);
     EXPECT_TRUE(!make_mirror_matrix_with_file(test_matrix, test_final_filename));
-    //printf("I did file..\n");
     EXPECT_TRUE(compareFiles(test_final_filename, test_expect_filename));
     free_matrix(test_matrix);
+    printf("\n");
+
 }
