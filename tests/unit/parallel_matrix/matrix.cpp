@@ -19,8 +19,8 @@ int test1_hor = 10;
 bool compareFiles(const char *filename1, const char *filename2) {
     int ch1 = 0, ch2 = 0;
 
-    FILE *f1 = fopen(filename2, "r");
-    FILE *f2 = fopen(filename1, "r");
+    FILE *f1 = fopen(filename1, "r");
+    FILE *f2 = fopen(filename2, "r");
 
     while (!feof(f1) && !feof(f2) && (ch1 == ch2)) {
         fscanf(f1, "%d", &ch1);
