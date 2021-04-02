@@ -1,2 +1,0 @@
-
-add_subdirectory(static_matrix)

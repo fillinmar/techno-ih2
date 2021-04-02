@@ -20,7 +20,7 @@ run-matrix-parallel-test:
 		&& ./parallel_matrix_test_correct
 
 run-matrix-static-test:
-	cd $(BUILD_DIR)/tests/unit/matrix/static_matrix \
+	cd $(BUILD_DIR)/tests/unit/static_matrix \
 		&& ./static_matrix_test_correct
 
 run-all-tests:
@@ -36,7 +36,7 @@ run-valgrind-test-matrix-parallel:
 		make run-valgrind-check dir=./parallel_matrix_test_correct
 
 run-valgrind-test-matrix-static:
-	cd $(BUILD_DIR)/tests/unit/matrix/static_matrix \
+	cd $(BUILD_DIR)/tests/unit/static_matrix \
 		make run-valgrind-check dir = ./static_matrix_test_correct
 
 run-all-vg-check:

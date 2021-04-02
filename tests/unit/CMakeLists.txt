@@ -1,2 +1,2 @@
-add_subdirectory(matrix)
+add_subdirectory(static_matrix)
 add_subdirectory(parallel_matrix)
