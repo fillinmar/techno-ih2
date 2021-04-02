@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 
-const int test_count = 20;
+const int test_count = 30;
 int test_vert = 500;
 int test_hor = 1000;
 
