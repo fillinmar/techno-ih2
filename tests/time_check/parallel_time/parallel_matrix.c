@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 
-const int test_count = 30;
+const int test_count = 3;
 int test_vert = 5000;
 int test_hor = 10000;
 
@@ -34,6 +34,6 @@ int main() {
     clock_t end = clock();
 
     double time_spent = (double) (end - begin) / CLOCKS_PER_SEC;
-    printf("\nTime to mirror parallel matrix in seconds: %f\n", time_spent/30);
+    printf("\nTime to mirror parallel matrix in seconds: %f\n", time_spent/3);
     return 0;
 }
