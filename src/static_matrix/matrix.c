@@ -4,52 +4,38 @@
 #include "matrix.h"
 #include <stdlib.h>
 
+#define ERROR_START_FILE 2
+#define ERROR_OPEN_FILE 3
+#define ERROR_MIRROR_FILE 4
 
-void print_start_matrix(Matrix matrix) {
-    for (int i = 0; i < matrix.vertical; ++i) {
-        for (int j = 0; j < matrix.horizontal; ++j)
-            printf("%d ", matrix.array[i][j]);
-        printf("\n");
-    }
-    printf("\n\n");
-}
-
-void print_final_matrix(Matrix *matrix) {
-    for (int i = 0; i < matrix->vertical; ++i) {
-        for (int j = 0; j < matrix->horizontal; j++) {
-            printf("%d ", matrix->array[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-int make_file_start_matrix(Matrix matrix, const char *filename) {
+int make_file_start_matrix(matrix matrix, const char *filename) {
     if (!filename)
-        return 2;
+        return ERROR_START_FILE;
 
     const char *mode = "w+";
     FILE *file;
     file = fopen(filename, mode);
     if (!file)
-        return 2;
+        return ERROR_START_FILE;
 
     for (int i = 0; i < matrix.horizontal * matrix.vertical; ++i) {
         fprintf(file, "%4d", rand() % 100);
     }
 
     if (fclose(file))
-        return 2;
+        return ERROR_START_FILE;
+
     return 0;
 }
 
-int make_file_with_mirror_matrix(Matrix *matrix, const char *filename) {
+int make_file_with_mirror_matrix(matrix *matrix, const char *filename) {
     if (!filename)
-        return 4;
+        return ERROR_MIRROR_FILE;
 
     FILE *f = fopen(filename, "w+");
 
     if (!f)
-        return 4;
+        return ERROR_MIRROR_FILE;
 
     for (int i = 0; i < matrix->vertical; ++i) {
         for (int j = 0; j < matrix->horizontal; j++) {
@@ -58,11 +44,11 @@ int make_file_with_mirror_matrix(Matrix *matrix, const char *filename) {
     }
 
     if (fclose(f))
-        return 4;
+        return ERROR_MIRROR_FILE;
     return 0;
 }
 
-int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
+int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
     int k = 2;
     for (int i = 0; i < matrix->vertical; ++i) {
         for (int j = 0; j < (matrix->horizontal - k); ++j) {
@@ -74,12 +60,12 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
     return (make_file_with_mirror_matrix(matrix, filename));
 }
 
-Matrix *create_matrix(int *horizontal, int *vertical) {
+matrix *create_matrix(int *horizontal, int *vertical) {
     if (!horizontal || !vertical) {
         return NULL;
     }
 
-    Matrix *m = (Matrix *) malloc(sizeof(Matrix));
+    matrix *m = (matrix *) malloc(sizeof(matrix));
     if (!m)
         return NULL;
 
@@ -97,15 +83,15 @@ Matrix *create_matrix(int *horizontal, int *vertical) {
     return m;
 }
 
-int read_and_fill_matrix(Matrix matrix_to_generate, const char *filename) {
+int read_and_fill_matrix(matrix *matrix_to_generate, const char *filename) {
     int temp = 0;
     FILE *f = fopen(filename, "rt");
     if (!f)
-        return 3;
-    for (int i = 0; i < matrix_to_generate.vertical; ++i) {
-        for (int j = 0; j < matrix_to_generate.horizontal; ++j) {
+        return ERROR_OPEN_FILE;
+    for (int i = 0; i < matrix_to_generate->vertical; ++i) {
+        for (int j = 0; j < matrix_to_generate->horizontal; ++j) {
             fscanf(f, "%d", &temp);
-            matrix_to_generate.array[i][j] = temp;
+            matrix_to_generate->array[i][j] = temp;
         }
     }
     fclose(f);
@@ -119,7 +105,7 @@ void swap(int *a, int *b) {
 }
 
 
-void free_matrix(Matrix *mart) {
+void free_matrix(matrix *mart) {
     if (mart == NULL) {
         return;
     }
@@ -137,3 +123,4 @@ void free_matrix(Matrix *mart) {
     free(mart);
     mart = NULL;
 }
+

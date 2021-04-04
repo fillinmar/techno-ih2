@@ -6,23 +6,28 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/mman.h>
-#include <sys/wait.h>
 #include <unistd.h>
 
-int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
+#define ERROR_START_FILE 2
+#define ERROR_OPEN_FILE 3
+#define ERROR_MIRROR_FILE 4
+#define ERROR_MAP 5
+#define ERROR_ALLOCATE_MEMORY 6
+
+int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
     if (!filename)
-        return 4;
+        return ERROR_MIRROR_FILE;
     int *index_of_diagonal = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE,
                                   MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!index_of_diagonal) {
-        return 5;
+        return ERROR_MAP;
     }
     *index_of_diagonal = matrix->horizontal;
 
     int *count_of_passed = mmap(NULL, sizeof(int), PROT_READ | PROT_WRITE,
                                 MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!count_of_passed) {
-        return 5;
+        return ERROR_MAP;
     }
     *count_of_passed = 0;
 
@@ -31,41 +36,39 @@ int make_mirror_matrix_with_file(Matrix *matrix, const char *filename) {
     int *mirror_paral_matrix = mmap(NULL, size_of_martix, PROT_READ | PROT_WRITE,
                                     MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!mirror_paral_matrix) {
-        return 5;
+        return ERROR_MAP;
     }
 
     int count_of_process = matrix->vertical / 2 + matrix->vertical % 2;
     int *pids = (int *) calloc(count_of_process, sizeof(int));
     if (!pids)
-        return 6;
+        return ERROR_ALLOCATE_MEMORY;
 
-    for (int i = 0; i < count_of_process; ++i) {
+    for (int i = 0; i < count_of_process; i = i+2) {
         pids[i] = fork();
         if (pids[i] == -1) {
             printf("Fork failed\n");
             if (munmap(mirror_paral_matrix, size_of_martix))
-                return 5;
+                return ERROR_MAP;
         }
+        if (pids[i] != 0)
+            procces_work(mirror_paral_matrix, matrix, count_of_process, i, count_of_passed,
+                         index_of_diagonal);
         if (pids[i] == 0) {
-            child_procces_work(mirror_paral_matrix, matrix, count_of_process, i, count_of_passed, index_of_diagonal);
+            procces_work(mirror_paral_matrix, matrix, count_of_process, i + 1, count_of_passed, index_of_diagonal);
             exit(EXIT_SUCCESS);
         }
     }
 
-    for (int i = 0; i < count_of_process; ++i) {
-        int status;
-        if (waitpid(pids[i], &status, 0) != pids[i] || WEXITSTATUS(status) != 0) {
-            return 0;
-        }
-    }
-    
     free(pids);
 
     return (make_file_with_mirror_matrix(mirror_paral_matrix, matrix->horizontal, filename));
 }
 
-void child_procces_work(int *mirror_paral_matrix, Matrix *matrix, int count_of_process, int i, int *count_of_passed,
-                        int *index_of_diagonal) {
+void procces_work(int *mirror_paral_matrix, matrix *matrix, int count_of_process, int i, int *count_of_passed,
+                  int *index_of_diagonal) {
+    if (i>= count_of_process)
+        return;
     int middle_of_array = matrix->vertical / 2;
     if (matrix->vertical % 2 == 1 && i == count_of_process - 1) {
         for (int j = 0; j < matrix->horizontal / 2 - 1; ++j) {
@@ -102,65 +105,43 @@ void child_procces_work(int *mirror_paral_matrix, Matrix *matrix, int count_of_p
 
 int make_file_with_mirror_matrix(int *matrix, int horizontal, const char *filename) {
     if (!filename)
-        return 4;
+        return ERROR_MIRROR_FILE;
     FILE *f = fopen(filename, "w+");
     if (!f)
-        return 4;
+        return ERROR_MIRROR_FILE;
 
     for (int i = 0; i < horizontal * horizontal * 0.5; ++i) {
         fprintf(f, "%4d", matrix[i]);
     }
     if (fclose(f))
-        return 4;
+        return ERROR_MIRROR_FILE;
 
     return 0;
 }
 
-void print_final_matrix(int *matrix, int horizontal) {
-    for (int i = 0; i < horizontal * 0.5 * horizontal; ++i) {
-        if (i % (horizontal) == 0)
-            printf("\n");
-        printf("%d ", matrix[i]);
-    }
-}
-
-void print_start_matrix(Matrix matrix) {
-    for (int i = 0; i < matrix.vertical / 2 + matrix.vertical % 2; ++i) {
-        for (int j = 0; j < matrix.horizontal; ++j)
-            printf("%d ", matrix.array[i][j]);
-        printf("\n");
-    }
-    for (int i = matrix.vertical / 2 - 1; i >= 0; --i) {
-        for (int j = matrix.horizontal; j < matrix.horizontal * 2; ++j)
-            printf("%d ", matrix.array[i][j]);
-        printf("\n");
-    }
-    printf("\n\n");
-}
-
-int make_file_start_matrix(Matrix matrix, const char *filename) {
+int make_file_start_matrix(matrix matrix, const char *filename) {
     if (!filename)
-        return 2;
+        return ERROR_START_FILE;
     const char *mode = "w+";
 
     FILE *file = fopen(filename, mode);
     if (!file)
-        return 2;
+        return ERROR_START_FILE;
     for (int i = 0; i < matrix.horizontal * matrix.vertical; ++i) {
-        fprintf(file, "%d", rand() % 100);
+        fprintf(file, "%4d", rand() % 100);
     }
     if (fclose(file)) {
-        return 2;
+        return ERROR_START_FILE;
     }
     return 0;
 }
 
-Matrix *create_matrix(int *horizontal, int *vertical) {
+matrix *create_matrix(int *horizontal, int *vertical) {
     if (!horizontal || !vertical) {
         return NULL;
     }
 
-    Matrix *m = (Matrix *) malloc(sizeof(Matrix));
+    matrix *m = (matrix *) malloc(sizeof(matrix));
     if (!m)
         return NULL;
 
@@ -178,29 +159,29 @@ Matrix *create_matrix(int *horizontal, int *vertical) {
     return m;
 }
 
-int read_and_fill_matrix(Matrix matrix, const char *filename) {
+int read_and_fill_matrix(matrix *matrix, const char *filename) {
     int temp = 0;
     FILE *f = fopen(filename, "rt");
     if (!f)
-        return 3;
+        return ERROR_OPEN_FILE;
 
-    for (int i = 0; i < matrix.vertical / 2 + (matrix.vertical % 2); ++i) {
-        for (int j = 0; j < matrix.horizontal; ++j) {
+    for (int i = 0; i < matrix->vertical / 2 + (matrix->vertical % 2); ++i) {
+        for (int j = 0; j < matrix->horizontal; ++j) {
             fscanf(f, "%d", &temp);
-            matrix.array[i][j] = temp;
+            matrix->array[i][j] = temp;
         }
     }
-    for (int i = matrix.vertical / 2 - 1; i >= 0; --i) {
-        for (int j = matrix.horizontal; j < matrix.horizontal * 2; ++j) {
+    for (int i = matrix->vertical / 2 - 1; i >= 0; --i) {
+        for (int j = matrix->horizontal; j < matrix->horizontal * 2; ++j) {
             fscanf(f, "%d", &temp);
-            matrix.array[i][j] = temp;
+            matrix->array[i][j] = temp;
         }
     }
     fclose(f);
     return 0;
 }
 
-void free_matrix(Matrix *mart) {
+void free_matrix(matrix *mart) {
     if (mart == NULL) {
         return;
     }

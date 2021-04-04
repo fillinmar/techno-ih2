@@ -12,24 +12,20 @@ typedef struct {
     int **array;
     int horizontal;
     int vertical;
-} Matrix;
+} matrix;
 
-Matrix *create_matrix(int *horizontal, int *vertical);
+matrix *create_matrix(int *horizontal, int *vertical);
 
-int make_file_start_matrix(Matrix matrix, const char *filename);
+int make_file_start_matrix(matrix matrix, const char *filename);
 
-int read_and_fill_matrix(Matrix matrix_to_generate, const char *filename);
+int read_and_fill_matrix(matrix *matrix_to_generate, const char *filename);
 
 void swap(int *a, int *b);
 
-void print_start_matrix(Matrix matrix);
+int make_mirror_matrix_with_file(matrix *matrix, const char *filename);
 
-void print_final_matrix(Matrix *matrix);
+int make_file_with_mirror_matrix(matrix *matrix, const char *filename);
 
-int make_mirror_matrix_with_file(Matrix *matrix, const char *filename);
-
-int make_file_with_mirror_matrix(Matrix *matrix, const char *filename);
-
-void free_matrix(Matrix *mart);
+void free_matrix(matrix *mart);
 
 #endif //HW_2_MATRIX_H
