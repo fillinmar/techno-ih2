@@ -39,26 +39,29 @@ int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
         return ERROR_MAP;
     }
 
-    int count_of_process = matrix->vertical / 2 + matrix->vertical % 2;
+    int count_of_process = 3; 
     int *pids = (int *) calloc(count_of_process, sizeof(int));
     if (!pids)
         return ERROR_ALLOCATE_MEMORY;
 
-    for (int i = 0; i < count_of_process; i = i+2) {
+    for (int i = 0; i < count_of_process; i = i+1) {
         pids[i] = fork();
         if (pids[i] == -1) {
             if (munmap(mirror_paral_matrix, size_of_martix))
                 return ERROR_MAP;
         }
-        else if (pids[i] != 0)
-            procces_work(mirror_paral_matrix, matrix, count_of_process, i, count_of_passed,
-                         index_of_diagonal);
+
         else if (pids[i] == 0) {
-            procces_work(mirror_paral_matrix, matrix, count_of_process, i + 1, count_of_passed, index_of_diagonal);
+            for (int j = 0; j<matrix->vertical/8; j++){
+            procces_work(mirror_paral_matrix, matrix, count_of_process, j+i*matrix->vertical/8 , count_of_passed, index_of_diagonal);
+            }
             exit(EXIT_SUCCESS);
         }
     }
-
+    for (int j = matrix->vertical/8*3; j<matrix->vertical/2+matrix->vertical%2; j++){
+        procces_work(mirror_paral_matrix, matrix, count_of_process, j, count_of_passed, index_of_diagonal);
+    }
+    
     free(pids);
 
     return (make_file_with_mirror_matrix(mirror_paral_matrix, matrix->horizontal, filename));
