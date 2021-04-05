@@ -47,14 +47,13 @@ int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
     for (int i = 0; i < count_of_process; i = i+2) {
         pids[i] = fork();
         if (pids[i] == -1) {
-            printf("Fork failed\n");
             if (munmap(mirror_paral_matrix, size_of_martix))
                 return ERROR_MAP;
         }
-        if (pids[i] != 0)
+        else if (pids[i] != 0)
             procces_work(mirror_paral_matrix, matrix, count_of_process, i, count_of_passed,
                          index_of_diagonal);
-        if (pids[i] == 0) {
+        else if (pids[i] == 0) {
             procces_work(mirror_paral_matrix, matrix, count_of_process, i + 1, count_of_passed, index_of_diagonal);
             exit(EXIT_SUCCESS);
         }
