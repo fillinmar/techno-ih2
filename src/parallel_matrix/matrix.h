@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 typedef struct {
-    int **array;
+    int *array;
     int vertical;
     int horizontal;
 } matrix;
