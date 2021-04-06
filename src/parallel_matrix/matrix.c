@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/mman.h>
+#include <sys/sysctl.h>
 #include <unistd.h>
 
 #define ERROR_START_FILE 2
@@ -39,7 +40,7 @@ int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
         return ERROR_MAP;
     }
 
-    int count_of_process = 3; 
+    int count_of_process = 3;
     int *pids = (int *) calloc(count_of_process, sizeof(int));
     if (!pids)
         return ERROR_ALLOCATE_MEMORY;
@@ -61,7 +62,7 @@ int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
     for (int j = matrix->vertical/8*3; j<matrix->vertical/2+matrix->vertical%2; j++){
         procces_work(mirror_paral_matrix, matrix, count_of_process, j, count_of_passed, index_of_diagonal);
     }
-    
+
     free(pids);
 
     return (make_file_with_mirror_matrix(mirror_paral_matrix, matrix->horizontal, filename));
@@ -69,32 +70,33 @@ int make_mirror_matrix_with_file(matrix *matrix, const char *filename) {
 
 void procces_work(int *mirror_paral_matrix, matrix *matrix, int count_of_process, int i, int *count_of_passed,
                   int *index_of_diagonal) {
+
     if (i>= count_of_process)
         return;
     int middle_of_array = matrix->vertical / 2;
     if (matrix->vertical % 2 == 1 && i == count_of_process - 1) {
         for (int j = 0; j < matrix->horizontal / 2 - 1; ++j) {
-            mirror_paral_matrix[middle_of_array * matrix->horizontal + j] = matrix->array[middle_of_array][
+            mirror_paral_matrix[middle_of_array * matrix->horizontal + j] = matrix->array[middle_of_array*matrix->horizontal+
                     matrix->horizontal - j - 1];
             mirror_paral_matrix[matrix->horizontal * matrix->vertical - 1 - j -
-                                *count_of_passed] = matrix->array[middle_of_array][j];;
+                                *count_of_passed] = matrix->array[middle_of_array*matrix->horizontal+j];;
         }
         mirror_paral_matrix[middle_of_array * matrix->horizontal + matrix->horizontal / 2 -
-                            1] = matrix->array[middle_of_array][
+                            1] = matrix->array[middle_of_array*matrix->horizontal+
                 matrix->horizontal / 2 - 1];
         mirror_paral_matrix[middle_of_array * matrix->horizontal +
-                            matrix->horizontal / 2] = matrix->array[middle_of_array][matrix->horizontal / 2];
+                            matrix->horizontal / 2] = matrix->array[middle_of_array*matrix->horizontal+matrix->horizontal / 2];
 
     } else
         for (int j = 0; j < matrix->horizontal; ++j) {
             if (j < *index_of_diagonal - 2 || j >= *index_of_diagonal) {
-                mirror_paral_matrix[(*count_of_passed) + j] = matrix->array[i][matrix->horizontal * 2 - j - 1];
+                mirror_paral_matrix[(*count_of_passed) + j] = matrix->array[i*matrix->horizontal+matrix->horizontal * 2 - j - 1];
                 mirror_paral_matrix[matrix->horizontal * matrix->vertical - 1 - j -
-                                    *count_of_passed] = matrix->array[i][j];
+                                    *count_of_passed] = matrix->array[i*matrix->horizontal+j];
             } else {
-                mirror_paral_matrix[(*count_of_passed) + j] = matrix->array[i][j];
+                mirror_paral_matrix[(*count_of_passed) + j] = matrix->array[i*matrix->horizontal+j];
                 mirror_paral_matrix[matrix->horizontal * matrix->vertical - 1 - j -
-                                    *count_of_passed] = matrix->array[i][
+                                    *count_of_passed] = matrix->array[i*matrix->horizontal+
                         matrix->horizontal * 2 -
                         j -
                         1];
@@ -139,25 +141,26 @@ int make_file_start_matrix(matrix matrix, const char *filename) {
 }
 
 matrix *create_matrix(int *horizontal, int *vertical) {
+
+    int cacheLineSize = sysconf(_SC_LEVEL1_DCACHE_LINESIZE);
+
     if (!horizontal || !vertical) {
         return NULL;
     }
-
-    matrix *m = (matrix *) malloc(sizeof(matrix));
-    if (!m)
+    matrix *m;
+    int res = posix_memalign((void**)&m, cacheLineSize,  sizeof(matrix));
+    if (res)
         return NULL;
+
 
     m->horizontal = *horizontal;
     m->vertical = *vertical;
-    m->array = (int **) malloc((m->vertical / 2 + m->vertical % 2) * sizeof(int *));
+    res = posix_memalign((void**)&m->array, cacheLineSize,  sizeof(int)*(m->vertical *m->horizontal));
+    if (res)
+        return NULL;
     if (!m->array)
         return NULL;
 
-    for (int i = 0; i < m->vertical / 2 + m->vertical % 2; i++) {
-        m->array[i] = (int *) malloc(m->horizontal * 2 * sizeof(int));
-        if (!m->array[i])
-            return NULL;
-    }
     return m;
 }
 
@@ -170,13 +173,13 @@ int read_and_fill_matrix(matrix *matrix, const char *filename) {
     for (int i = 0; i < matrix->vertical / 2 + (matrix->vertical % 2); ++i) {
         for (int j = 0; j < matrix->horizontal; ++j) {
             fscanf(f, "%d", &temp);
-            matrix->array[i][j] = temp;
+            matrix->array[i*matrix->horizontal+j] = temp;
         }
     }
     for (int i = matrix->vertical / 2 - 1; i >= 0; --i) {
         for (int j = matrix->horizontal; j < matrix->horizontal * 2; ++j) {
             fscanf(f, "%d", &temp);
-            matrix->array[i][j] = temp;
+            matrix->array[i*matrix->horizontal+j] = temp;
         }
     }
     fclose(f);
@@ -187,17 +190,8 @@ void free_matrix(matrix *mart) {
     if (mart == NULL) {
         return;
     }
-
-    if ((*mart).array == NULL) {
-        free(mart);
-        mart = NULL;
-        return;
-    }
-
-    for (int i = 0; i < mart->vertical / 2 + mart->vertical % 2; i++) {
-        free(mart->array[i]);
-    }
     free(mart->array);
     free(mart);
     mart = NULL;
 }
+
