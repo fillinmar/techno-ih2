@@ -1,7 +1,3 @@
-//
-// Created by fillinmar on 31.03.2021.
-//
-
 #include <gtest/gtest.h>
 #include <fstream>
 
@@ -43,9 +39,6 @@ TEST(INITIALIZE, CREATE_MATRIX) {
     EXPECT_TRUE(test_matrix != NULL);
     EXPECT_TRUE(test_matrix->array != NULL);
 
-    for (size_t i = 0; i < test_matrix->vertical / 2 + test_matrix->vertical % 2; ++i) {
-        EXPECT_TRUE(test_matrix->array[i] != NULL);
-    }
     free_matrix(test_matrix);
 }
 
@@ -59,13 +52,13 @@ TEST(MATRIX, READ_AND_FILL) {
     for (int i = 0; i < test_matrix->vertical / 2 + (test_matrix->vertical % 2); ++i) {
         for (int j = 0; j < test_matrix->horizontal; ++j) {
             fscanf(f, "%d", &temp);
-            test_matrix->array[i][j] = temp;
+            test_matrix->array[i*test_matrix->horizontal+j] = temp;
         }
     }
     for (int i = test_matrix->vertical / 2 - 1; i >= 0; --i) {
         for (int j = test_matrix->horizontal; j < test_matrix->horizontal * 2; ++j) {
             fscanf(f, "%d", &temp);
-            test_matrix->array[i][j] = temp;
+            test_matrix->array[i*test_matrix->horizontal+j] = temp;
         }
     }
     fclose(f);
@@ -73,12 +66,12 @@ TEST(MATRIX, READ_AND_FILL) {
     EXPECT_TRUE(!read_and_fill_matrix(test_matrix_check, test_filename));
     for (int i = 0; i < test_matrix->vertical / 2 + (test_matrix->vertical % 2); ++i) {
         for (int j = 0; j < test_matrix->horizontal; ++j) {
-            EXPECT_EQ(test_matrix->array[i][j], test_matrix_check->array[i][j]);
+            EXPECT_EQ(test_matrix->array[i*test_matrix->horizontal+j], test_matrix_check->array[i*test_matrix_check->horizontal+j]);
         }
     }
     for (int i = test_matrix->vertical / 2 - 1; i >= 0; --i) {
         for (int j = test_matrix->horizontal; j < test_matrix->horizontal * 2; ++j) {
-            EXPECT_EQ(test_matrix->array[i][j], test_matrix_check->array[i][j]);
+            EXPECT_EQ(test_matrix->array[i*test_matrix->horizontal+j], test_matrix_check->array[i*test_matrix_check->horizontal+j]);
             fscanf(f, "%d", &temp);
         }
     }
